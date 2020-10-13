@@ -36,3 +36,7 @@ INSERT 0 1
 
 spring.datasource.username = fierita  
 spring.datasource.password = contratame
+
+```bash
+curl {"url_target": "https://www.fiastudo.com", "expiration": "2020-10-18T00:00:00.000+00:00"}
+```
