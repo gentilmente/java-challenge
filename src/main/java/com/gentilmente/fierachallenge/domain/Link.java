@@ -25,6 +25,4 @@ public class Link implements Serializable {
   private Timestamp expiration;
   private Integer clicks;
   private String shortened;
-  private String token;
-  private Integer valid;
 }

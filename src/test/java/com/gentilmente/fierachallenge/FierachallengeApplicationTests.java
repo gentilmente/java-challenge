@@ -30,8 +30,6 @@ class FierachallengeApplicationTests {
 		c.setExpiration(date);
 		c.setClicks(4);
 		c.setShortened("http://localhost:8080/l/b");
-		c.setToken("test-borrar");
-		c.setValid(0);
 		linkService.save(c);
 	}
 

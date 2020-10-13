@@ -14,8 +14,6 @@ CREATE TABLE link (
   expiration timestamp without time zone,
   clicks integer,
   shortened character varying(255),
-  token character varying(255),
-  valid integer,
   CONSTRAINT link_pkey PRIMARY KEY (id)
 ) TABLESPACE pg_default;
 ALTER TABLE link OWNER to fierita;
