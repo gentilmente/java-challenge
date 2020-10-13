@@ -5,6 +5,9 @@ import com.gentilmente.fierachallenge.service.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
@@ -27,9 +30,26 @@ class FierachallengeApplicationTests {
 		c.setExpiration(date);
 		c.setClicks(4);
 		c.setShortened("http://localhost:8080/l/b");
-		c.setToken("1234567890");
-		c.setValid(1);
+		c.setToken("test-borrar");
+		c.setValid(0);
 		linkService.save(c);
+	}
 
+	@Test
+	void testGetData() throws Exception {
+		Long id = Long.parseLong("1");
+		Link l = linkService.findById(id);
+		String expected = "https://www.example.com";
+		String actual = l.getUrl_target();
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	void testGetData2() throws Exception {
+		Long id = Long.parseLong("2");
+		Link l = linkService.findById(id);
+		String expected = "http://example.com";
+		String actual = l.getUrl_target();
+		assertEquals(expected, actual);
 	}
 }
