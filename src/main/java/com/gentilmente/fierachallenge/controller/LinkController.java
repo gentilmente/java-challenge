@@ -24,11 +24,15 @@ public class LinkController {
   private LinkService linkService;
 
   //curl {"url_target": "https://www.fiastudo.com", "expiration": "2020-10-18T00:00:00.000+00:00"}
+
   @PostMapping("/create")
-  public ResponseEntity<Link> create(@Valid @RequestBody Link link) throws Exception {
+  
+  public ResponseEntity<String> create(@Valid @RequestBody Link link) throws Exception {
+    link.setShortened("localhost:8080/l/asdasd");
+    
     Link l = linkService.save(link);
 
-    return ResponseEntity.ok(l);
+    return ResponseEntity.ok(l.getShortened());
 
   }
 }
