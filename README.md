@@ -38,5 +38,5 @@ spring.datasource.username = fierita
 spring.datasource.password = contratame
 
 ```bash
-curl {"url_target": "https://www.fiastudo.com", "expiration": "2020-10-18T00:00:00.000+00:00"}
+curl {"url_target": "https://www.fierastudo.com", "expiration": "2020-10-18T00:00:00.000+00:00"}
 ```
